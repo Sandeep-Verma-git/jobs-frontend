@@ -1,13 +1,386 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* .center {
+    background: red;
+    padding: 1rem;
+} */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: hsl(210, 36%, 96%);
+    letter-spacing: 2px;
+}
+
+.card-center {
+    width: 40vw;
+    margin: 3rem auto;
+    margin-top: 5rem;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 0.2rem;
+}
+
+label {
+    display: block;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background: hsl(210, 36%, 96%);
+    font-size: 1rem;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+}
+
+.card-inputs {
+    margin-top: 1rem;
+}
+
+.card-input {
+    margin: 1rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.btn {
+    background: #fb4d3d;
+    color: #fff;
+    padding: 0.3rem;
+    font-size: 1rem;
+    width: 30%;
+    border-color: #fb4d3d;
+    letter-spacing: 2px;
+    border-radius: 0.2rem;
+    transition: all 0.3s linear;
+    margin-top: 1rem;
+    text-transform: capitalize;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #fb4d3d;
+}
+
+.card-btn {
+    text-align: center;
+}
+
+
+.alert {
+    text-align: center;
+    margin-bottom: 1rem;
+    border-radius: 0.2rem;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+}
+
+.alert-success {
+    color: #155724;
+    background: #d4edda;
+}
+
+.alert-danger {
+    color: #721c24;
+    background: #f8d7da;
+}
+
+.nav {
+    background: #fff;
+    text-transform: capitalize;
+    padding: 1rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.btn-logout {
+    color: #fb4d3d;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    transition: all 0.3s linear;
+}
+
+.btn-logout:hover {
+    cursor: pointer;
+    color: #222;
+
+}
+
+.nav-section {
+    display: flex;
+    align-items: center;
+}
+
+.span-orange {
+    color: #fb4d3d;
+}
+
+.jobs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 5rem;
+
+}
+
+.job-card {
+    background: #fff;
+    width: 22%;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.2rem;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.job-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.job-card-title {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.job-card-company-name {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.2rem 0.4rem;
+    background: #fec8c4;
+    color: #fb4d3d;
+    text-transform: capitalize;
+}
+
+.job-card-status {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #fb4d3d;
+}
+
+.job-card-btn {
+    border: none;
+    outline: none;
+    background: transparent;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    transition: all 0.3s linear;
+}
+
+.job-card-btn-del {
+    color: #721c24;
+}
+
+.job-card-btn-del:hover {
+    cursor: pointer;
+    transform: translateY(-0.2rem);
+}
+
+.job-card-btn-edit {
+    margin-left: 0.5rem;
+    color: #155724;
+}
+
+.job-card-btn-edit:hover {
+    cursor: pointer;
+    transform: translateY(-0.2rem);
+}
+
+.not-found {
+    width: 55vw;
+    height: 63vh;
+    margin: 5rem auto;
+}
+
+.not-found img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 920px) {
+    .card-center {
+        width: 70vw;
+    }
+
+    .not-found {
+        width: 93vw;
+
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .job-card {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .jobs {
+        padding: 1.5rem;
+    }
+
+    .job-card {
+        width: 45%;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .job-card {
+        width: 100%;
+    }
+
+    .jobs {
+        padding: 1rem;
+    }
+
+    .nav {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-center {
+        width: 80vw;
+    }
+
+    .not-found {
+        width: 90vw;
+        height: 50vh;
+    }
+}
+
+.to-dashboard {
+    text-align: center;
+}
+
+.btn-dashboard {
+    width: auto;
+}
+
+.no-jobs {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 5rem;
+    font-weight: 600;
+}
+
+.loading {
+    width: 5rem;
+    height: 5rem;
+    border: 5px solid #94a3b8;
+    border-radius: 50%;
+    border-top-color: #fb4d3d;
+    animation: spinner 0.6s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.edit-loading {
+    margin-top: 2rem;
+}
+
+.home-section {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 64px);
+}
+
+.home-section-left {
+    width: 50vw;
+    height: 80vh;
+    position: relative;
+}
+
+.home-section-right {
+    width: 50vw;
+    height: 80vh;
+    position: relative;
+}
+
+.home-section-left div {
+    width: 80%;
+    position: absolute;
+    padding: 1rem;
+    top: 40%;
+    left: 40%;
+    transform: translate(-40%, -40%);
+}
+
+.home-section-left div h1 {
+    margin-bottom: 1rem;
+    text-transform: capitalize
+}
+
+.home-section-left div p {
+    margin-bottom: 1rem;
+}
+
+.home-section-right img {
+    position: absolute;
+    height: 75%;
+    left: 40%;
+    top: 25%;
+    transform: translate(-40%, -25%);
+}
+
+.btn-home {
+    width: auto;
+}
+
+@media screen and (max-width:800px) {
+    .home-section-right {
+        display: none;
+    }
+
+    .home-section-left {
+        width: 100vw;
+    }
+}
+
+.link {
+    display: flex;
+    margin-top: 1rem;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.link-target {
+    color: #fb4d3d;
+    text-decoration: none;
+    margin-left: 0.5rem;
 }
